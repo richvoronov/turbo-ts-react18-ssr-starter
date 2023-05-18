@@ -1,0 +1,23 @@
+{
+  "name": "docs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "clean": "rimraf ./dist && rimraf ./.turbo && rimraf ./node_modules",
+    "lint": "eslint \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "@myproject/ui": "*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^3.3.0",
+    "eslint": "^8.40.0",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5"
+  }
+}

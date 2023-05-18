@@ -1,0 +1,28 @@
+{
+  "name": "web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development tsx watch --ignore vite.config.ts.timestamp-*.mjs ./src/server.ts",
+    "start": "npm run build && NODE_ENV=production tsx --tsconfig tsconfig.prod.json ./src/server.ts",
+    "build": "npm run build:client && npm run build:server",
+    "clean": "rimraf ./dist && rimraf ./.turbo && rimraf ./node_modules",
+    "build:client": "vite build -c vite.config.ts",
+    "build:server": "vite build -c vite.config.ssr.ts",
+    "lint": "eslint \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "@myproject/ssr": "*",
+    "@myproject/ui": "*"
+  },
+  "devDependencies": {
+    "@myproject/vite": "*",
+    "@vitejs/plugin-react-swc": "^3.3.0",
+    "eslint": "^8.40.0",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5"
+  }
+}

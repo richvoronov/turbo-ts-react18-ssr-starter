@@ -1,0 +1,7 @@
+{
+  "extends": "./vite.json",
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,4 @@
+{
+  "extends": "tsconfig/react.prod.json",
+  "include": ["src", "server.ts"]
+}

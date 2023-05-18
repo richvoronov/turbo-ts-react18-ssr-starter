@@ -1,0 +1,7 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "jsx": "react-jsxdev"
+  },
+  "exclude": ["node_modules"]
+}
